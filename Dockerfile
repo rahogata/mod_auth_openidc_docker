@@ -178,7 +178,7 @@ RUN set -eux \
     ; make install \
     ; cd .. \
     ; rm -r openidc.tar.gz src \
-    ; echo >> 'LoadModule auth_openidc_module modules/mod_auth_openidc.so' >> "${HTTPD_PREFIX}/conf/httpd.conf" \
+    ; echo 'LoadModule auth_openidc_module modules/mod_auth_openidc.so' >> "${HTTPD_PREFIX}/conf/httpd.conf" \
     ; apk add --virtual .httpd-rundeps $runDeps \
     ; apk del .build-deps
 
